@@ -14,7 +14,7 @@ curl -s https://online.tableau.com
 ```
 * Use [this page](https://help.tableau.com/current/online/en-us/security_personal_access_tokens.htm) to create personal access tokens per bridge client instance/replica.
 * The token name should follow the naming convention bridge-$SITE_NAME-$POOL_NAME-$INDEX where $INDEX starts in 0
-* Save the token names and values in a file named ~/.dcpat/tableau_tokens.yaml. Sample content of the file: 
+* Save the token names and values in a file named ~/.dcpat/tokens.yaml. Sample content of the file: 
 ```yaml
 tokens:
 - name: "<personal-access-token-name>"
