@@ -122,7 +122,7 @@ class TableauTokenProgram:
             if not d.get(name):
                 raise ValueError(f'--{name} is required')
         if self.parent_parser_name == TableauBridgeProgram.parser_name:
-            d['token_prefix'] = f'bridge-{args.site}-{args.pool}'
+            d['token_prefix'] = f'bridge-{args.pool}'
 
     def run(self, args, secrets):
         client = TableauClient(args.server, args.site, args.token_prefix)
@@ -130,7 +130,7 @@ class TableauTokenProgram:
         tokenmanager = TableauTokenManager(args.tokens_path, client, secretmanager)
         if args.action2 == 'list':
             tokenmanager.list()
-        elif args.action2 ==  'store':
+        elif args.action2 == 'store':
             tokenmanager.store()
         elif args.action2 == 'test':
             tokenmanager.test()
